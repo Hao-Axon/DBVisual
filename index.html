@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="db_visual.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./connections/jquery.connections.js"></script>
+    </head>
+    <body>
+        <h1>Schema View</h1>
+        <div>
+            <input id="my-input" placeholder="Type table name">
+            <button id="my-load-btn" type="button">Load</button>
+        </div>
+        <script src="db_visual.js"></script>
+        <script>
+            let btn = document.getElementById('my-load-btn');
+            let input = document.getElementById('my-input');
+            btn.onclick = function () {
+                window.dbVisual.load(input.value);
+            }
+        </script>
+    </body>
+</html>
